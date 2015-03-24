@@ -46,7 +46,7 @@ UL			({L}|\\u{H}{H}{H}{H}|\\U{H}{H}{H}{H}{H}{H}{H}{H})
 #include <ctype.h>
 
 #include "pass1.h"
-#include "cgram.h"
+#include "cxxgram.h"
 
 static NODE *cvtdig(int radix);
 static NODE *charcon(void);

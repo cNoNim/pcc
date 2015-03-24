@@ -197,11 +197,20 @@ char *cppadd[] = CPPADD;
 char *cppmdadd[] = CPPMDADD;
 
 /* Default libraries and search paths */
-#ifndef PCCLIBDIR	/* set by autoconf */
-#define PCCLIBDIR	NULL
-#endif
 #ifndef LIBDIR
 #define LIBDIR		"/usr/lib/"
+#endif
+#ifndef LIBEXECDIR
+#define LIBEXECDIR	"/usr/libexec"
+#endif
+#ifndef INCLUDEDIR
+#define INCLUDEDIR	"/usr/include"
+#endif
+#ifndef PCCLIBDIR	/* set by autoconf */
+#define PCCLIBDIR	LIBDIR "/pcc/" TARGET "/" VERSION "/lib"
+#endif
+#ifndef PCCINCDIR	/* set by autoconf */
+#define PCCINCDIR	LIBDIR "/pcc/" TARGET "/" VERSION "/include"
 #endif
 #ifndef DEFLIBDIRS	/* default library search paths */
 #ifdef MULTIARCH_PATH
